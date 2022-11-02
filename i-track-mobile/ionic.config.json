@@ -1,0 +1,7 @@
+{
+  "name": "i-track-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

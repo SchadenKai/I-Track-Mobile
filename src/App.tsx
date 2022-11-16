@@ -10,10 +10,12 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import { calendar, home, personCircleOutline, gridOutline, checkboxOutline} from 'ionicons/icons';
+import Todo from './pages/Todo';
+import Bulletin from './pages/Bulletin';
+import Home from './pages/Home';
+import Calendar from './pages/Calendar';
+import Profile from './pages/Profile';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -41,31 +43,45 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
-            <Tab1 />
+          <Route exact path="/todo">
+            <Todo />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/bulletin">
+            <Bulletin />
           </Route>
-          <Route path="/tab3">
-            <Tab3 />
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route exact path="/calendar">
+            <Calendar />
+          </Route>
+          <Route exact path="/profile">
+            <Profile />
           </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/home" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+          <IonTabButton tab="todo" href="/todo">
+            <IonIcon icon={checkboxOutline} />
+            <IonLabel>To do</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+          <IonTabButton tab="bulletin" href="/bulletin">
+            <IonIcon icon={gridOutline} />
+            <IonLabel>Bulletin</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonTabButton tab="home" href="/home">
+            <IonIcon icon={home} />
+            <IonLabel>Home</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="calendar" href="/calendar">
+            <IonIcon icon={calendar} />
+            <IonLabel>Calendar</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="profile" href="/profile">
+            <IonIcon icon={personCircleOutline} />
+            <IonLabel>Profile</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

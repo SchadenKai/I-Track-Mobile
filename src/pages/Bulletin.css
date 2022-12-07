@@ -6,3 +6,48 @@
     justify-content: center;
     align-items: center;
 }
+
+ion-card{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 0 !important; 
+
+  }
+
+ion-card-content{
+    margin-bottom: 0%;
+    margin-left: 27%;
+}
+
+ion-item{
+    width:500%;
+    height: 4.5vh;
+  }
+
+
+ion-tab-button{
+    color: black;
+    background-color: #dc3545;
+}
+
+img{
+    width: 80%;
+    max-height: 80%;
+}
+
+.bulletin{
+    width: 40%;
+    max-height: 15vh;
+}
+
+.lbl{
+    font-size: 1rem;
+}
+
+.cntnt{
+    font-size: 0.7rem;
+    margin-bottom: 10%;
+}

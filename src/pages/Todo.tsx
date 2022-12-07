@@ -1,6 +1,6 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonCheckbox, IonContent, IonHeader, IonItem, IonLabel, IonPage , IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import './Todo.css';
+import './Home.css';
 
 const Tab1: React.FC = () => {
   return (
@@ -12,10 +12,83 @@ const Tab1: React.FC = () => {
             </div>
           </IonToolbar>
         </IonHeader>
-      <IonContent fullscreen>
+        <IonContent fullscreen>
+      <IonContent fullscreen={true} className="ion-padding">
+
+<div>
+      <h1>This Week</h1>
+  	  <IonItem>
+      <IonCheckbox slot="start"></IonCheckbox>
+      <IonLabel>Assignment #1</IonLabel>
+    </IonItem>
+  
+
+	<IonItem>
+      <IonCheckbox slot="start"></IonCheckbox>
+      <IonLabel>Project #3</IonLabel>
+    </IonItem>
+
+	<IonItem>
+      <IonCheckbox slot="start"></IonCheckbox>
+      <IonLabel>Quiz in Science</IonLabel>
+    </IonItem>
+	
+	<IonItem>
+      <IonCheckbox slot="start"></IonCheckbox>
+      <IonLabel>assignment #2</IonLabel>
+    </IonItem></div>
+<div>        
+      <h1>Today</h1>
+	  <IonItem>
+      <IonCheckbox slot="start"></IonCheckbox>
+      <IonLabel>Assignment #1</IonLabel>
+    </IonItem>
+  
+
+	<IonItem>
+      <IonCheckbox slot="start"></IonCheckbox>
+      <IonLabel>Project #3</IonLabel>
+    </IonItem>
+
+	<IonItem>
+      <IonCheckbox slot="start"></IonCheckbox>
+      <IonLabel>Quiz in Science</IonLabel>
+    </IonItem>
+	
+	<IonItem>
+      <IonCheckbox slot="start"></IonCheckbox>
+      <IonLabel>assignment #2</IonLabel>
+    </IonItem></div>
+
+<div>
+<h1>This Month</h1>
+	  <IonItem>
+      <IonCheckbox slot="start"></IonCheckbox>
+      <IonLabel>Assignment #1</IonLabel>
+    </IonItem>
+  
+
+	<IonItem>
+      <IonCheckbox slot="start"></IonCheckbox>
+      <IonLabel>Project #3</IonLabel>
+    </IonItem>
+
+	<IonItem>
+      <IonCheckbox slot="start"></IonCheckbox>
+      <IonLabel>Quiz in Science</IonLabel>
+    </IonItem>
+	
+	<IonItem>
+      <IonCheckbox slot="start"></IonCheckbox>
+      <IonLabel>assignment #2</IonLabel>
+    </IonItem>
+</div>
+      
+
         <ExploreContainer name="Tab 3 page" />
-      </IonContent>
-    </IonPage>
+        </IonContent>
+        </IonContent>
+     </IonPage>
   );
 };
 

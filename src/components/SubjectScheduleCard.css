@@ -1,0 +1,15 @@
+ion-card {
+    display: flex;
+}
+ion-card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+ion-card-content p {
+    display: flex;
+    align-items: center;
+}
+ion-card-content p ion-icon{
+    margin-right: 5px;
+    color: black;
+}

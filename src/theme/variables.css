@@ -3,7 +3,7 @@ http://ionicframework.com/docs/theming/ */
 
 /** Ionic CSS Variables **/
 :root {
-  /** i-track primary **/
+  /** i-track-white **/
   --ion-color-i-track-white: #FDEFF1;
 	--ion-color-i-track-white-rgb: 253,239,241;
 	--ion-color-i-track-white-contrast: #000000;

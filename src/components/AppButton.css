@@ -1,0 +1,7 @@
+.cstm-filter-button ion-button {
+    --border-color: black;
+    --color: black;
+    font-size: 14px;
+    text-transform: none;
+    --border-width: 1px;
+}

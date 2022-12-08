@@ -1,6 +1,5 @@
-import { IonAvatar, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonItem, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonToolbar } from '@ionic/react';
 import BulletinContainer from '../components/BulletinContainer';
-import ExploreContainer from '../components/ExploreContainer';
 import './Bulletin.css';
 
 const Tab2: React.FC = () => {

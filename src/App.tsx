@@ -16,6 +16,7 @@ import Bulletin from './pages/Bulletin';
 import Home from './pages/Home';
 import Calendar from './pages/Calendar';
 import Profile from './pages/Profile';
+import PersonalInfoPage from './pages/PersonalInfoPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -60,6 +61,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />
+          </Route>
+          <Route exact path={'/personalInfo'}>
+            <PersonalInfoPage/>
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom" color={'red-primary'}>

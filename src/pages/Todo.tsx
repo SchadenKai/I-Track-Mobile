@@ -1,5 +1,5 @@
-import { IonCheckbox, IonContent, IonHeader, IonItem, IonLabel, IonPage , IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonContent, IonHeader, IonPage , IonToolbar } from '@ionic/react';
+import ToDoItems from '../components/ToDoItems';
 import './Todo.css';
 
 const Tab1: React.FC = () => {
@@ -15,60 +15,24 @@ const Tab1: React.FC = () => {
       <IonContent fullscreen className="ion-padding">
         <div>
           <h1>This Week</h1>
-          <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>Assignment #1</IonLabel>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>Project #3</IonLabel>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>Quiz in Science</IonLabel>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>assignment #2</IonLabel>
-          </IonItem>
+          <ToDoItems item_content='Assignment #1'/>
+          <ToDoItems item_content='Project #3'/>
+          <ToDoItems item_content='Quiz in Science'/>
+          <ToDoItems item_content='Assignment #2'/>
         </div>
         <div>        
           <h1>Today</h1>
-          <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>Assignment #1</IonLabel>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>Project #3</IonLabel>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>Quiz in Science</IonLabel>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>assignment #2</IonLabel>
-          </IonItem>
+          <ToDoItems item_content='Assignment #1'/>
+          <ToDoItems item_content='Project #3'/>
+          <ToDoItems item_content='Quiz in Science'/>
+          <ToDoItems item_content='Assignment #2'/>
         </div>
         <div>
           <h1>This Month</h1>
-          <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>Assignment #1</IonLabel>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>Project #3</IonLabel>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>Quiz in Science</IonLabel>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>assignment #2</IonLabel>
-          </IonItem>
+          <ToDoItems item_content='Assignment #1'/>
+          <ToDoItems item_content='Project #3'/>
+          <ToDoItems item_content='Quiz in Science'/>
+          <ToDoItems item_content='Assignment #2'/>
         </div>
       </IonContent>
     </IonPage>

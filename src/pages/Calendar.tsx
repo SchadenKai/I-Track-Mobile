@@ -5,13 +5,13 @@ import './Calendar.css';
 const Tab3: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader translucent={true}>
-          <IonToolbar>
-            <div className="container">
-              I-Track
-            </div>
-          </IonToolbar>
-        </IonHeader>
+      <IonHeader>
+        <IonToolbar color={'red-primary'}>
+          <div className="container">
+            I-Track
+          </div>
+        </IonToolbar>
+      </IonHeader>
       <IonContent fullscreen>
         <ExploreContainer name="Tab 3 page" />
       </IonContent>

@@ -62,7 +62,7 @@ const App: React.FC = () => (
             <Redirect to="/home" />
           </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+        <IonTabBar slot="bottom" color={'red-primary'}>
           <IonTabButton tab="todo" href="/todo">
             <IonIcon icon={checkboxOutline} />
             <IonLabel>To do</IonLabel>

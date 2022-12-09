@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { calendar, home, personCircleOutline, gridOutline, checkboxOutline} from 'ionicons/icons';
+import { calendar, home, personCircleOutline, gridOutline, checkboxOutline, grid, checkbox, personCircle} from 'ionicons/icons';
 import Todo from './pages/Todo';
 import Bulletin from './pages/Bulletin';
 import Home from './pages/Home';
@@ -36,6 +36,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Login from './pages/Login';
 
 setupIonicReact();
 
@@ -65,14 +66,17 @@ const App: React.FC = () => (
           <Route exact path={'/personalInfo'}>
             <PersonalInfoPage/>
           </Route>
+          <Route exact path={'/Login'}>
+            <Login/>
+          </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom" color={'red-primary'}>
           <IonTabButton tab="todo" href="/todo">
-            <IonIcon icon={checkboxOutline} />
+            <IonIcon icon={checkbox} />
             <IonLabel>To do</IonLabel>
           </IonTabButton>
           <IonTabButton tab="bulletin" href="/bulletin">
-            <IonIcon icon={gridOutline} />
+            <IonIcon icon={grid} />
             <IonLabel>Bulletin</IonLabel>
           </IonTabButton>
           <IonTabButton tab="home" href="/home">
@@ -84,7 +88,7 @@ const App: React.FC = () => (
             <IonLabel>Calendar</IonLabel>
           </IonTabButton>
           <IonTabButton tab="profile" href="/profile">
-            <IonIcon icon={personCircleOutline} />
+            <IonIcon icon={personCircle} />
             <IonLabel>Profile</IonLabel>
           </IonTabButton>
         </IonTabBar>

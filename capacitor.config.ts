@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'i-track-mobile',
+  appName: 'I Track: Mobile',
   webDir: 'build',
   bundledWebRuntime: false
 };

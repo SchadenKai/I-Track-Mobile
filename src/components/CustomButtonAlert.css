@@ -1,0 +1,21 @@
+.custom-button-alert > ion-button{
+    text-transform: none;
+}
+.custom-button-alert > ion-button > .button-label-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.custom-button-alert > ion-button > p {
+    margin: 0 10px;
+}
+.toolbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toolbar-container > ion-button {
+    position: absolute;
+    left: 0;
+}

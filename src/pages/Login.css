@@ -3,19 +3,35 @@
     height: 100%;
     overflow-y: hidden;
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 1fr 50%;
+}
+.login-bg {
+    background-image: url('../../public/assets/images/LoginPageBackDrop.png');
+    background-size: cover;
 }
 .login-input-wrapper {
     width: 80%;
 }
+.position-relative {
+    position: absolute;
+    z-index: -1;
+    height: 60%;
+    right: 0;
+    left: 0;
+}
+.container img {
+    width: 50px;
+}
+
 .login-input-wrapper > * {
     margin: 15px 0;
+    border-radius: 15px;
 }
 .login-button-wrapper { 
     width: 80%;
 }
 .login-main {
-    border-radius: 30px 30px 0 0 ;
+    border-radius: 25px 25px 0 0 ;
     background-color: rgb(31, 31, 31);
     width: 100%;
     display: flex;

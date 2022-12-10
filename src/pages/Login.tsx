@@ -11,17 +11,11 @@ const Login: React.FC = () => {
     }
     return (
         <IonPage>
-            <IonHeader>
-                <IonToolbar color={'red-primary'}>
-                <div className="container">
-                    I-Track
-                </div>
-                </IonToolbar>
-            </IonHeader>
             <IonContent>
                 <div className='login-container'>
-                    <section>
-                        <img src="./assets/images/LoginPageBackDrop.png" />
+                    <div></div>
+                    <section className='position-relative login-bg'>
+                        <img className='container' src='./assets/icon/ITrackMobileCircle.png' alt='icon'/>
                     </section>
                     <section className='login-main'>
                         <div className='login-input-wrapper'>

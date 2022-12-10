@@ -26,7 +26,7 @@ const Login: React.FC = () => {
                     <section className='login-main'>
                         <div className='login-input-wrapper'>
                         <IonItem fill='outline'>
-                                <IonLabel position='floating'>Email</IonLabel>
+                                <IonLabel position='stacked'>Email</IonLabel>
                                 <IonInput 
                                     clearOnEdit
                                     placeholder='Email'
@@ -35,7 +35,7 @@ const Login: React.FC = () => {
                                 />
                             </IonItem>
                             <IonItem fill='outline'>
-                                <IonLabel position='floating'>Password</IonLabel>
+                                <IonLabel position='stacked'>Password</IonLabel>
                                 <IonInput 
                                     placeholder='Password'
                                     onIonChange={(e:any) => setPassword(e.target.value)}

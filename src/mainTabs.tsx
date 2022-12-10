@@ -1,23 +1,3 @@
-import { Redirect, Route } from 'react-router-dom';
-import {
-  IonApp,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
-  setupIonicReact
-} from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import { calendar, home, personCircleOutline, gridOutline, checkboxOutline, grid, checkbox, personCircle} from 'ionicons/icons';
-import Todo from './pages/Todo';
-import Bulletin from './pages/Bulletin';
-import Home from './pages/Home';
-import Calendar from './pages/Calendar';
-import Profile from './pages/Profile';
-import PersonalInfoPage from './pages/PersonalInfoPage';
-
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -37,39 +17,28 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import Login from './pages/Login';
+import { IonTabs, IonRouterOutlet, IonTabBar, IonTabButton, IonIcon, IonLabel } from '@ionic/react';
+import { personCircleOutline, documentTextOutline, calendar, checkbox, grid, home, personCircle } from 'ionicons/icons';
+import { Redirect, Route } from 'react-router';
+import Profile from './pages/Profile';
+import Bulletin from './pages/Bulletin';
+import Todo from './pages/Todo';
+import Home from './pages/Home';
+import PersonalInfoPage from './pages/PersonalInfoPage';
 
-setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
+const MainTabs: React.FC = () => {
+    return (
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/todo">
-            <Todo />
-          </Route>
-          <Route exact path="/bulletin">
-            <Bulletin />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route exact path="/calendar">
-            <Calendar />
-          </Route>
-          <Route exact path="/profile">
-            <Profile />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/login" />
-          </Route>
-          <Route exact path='/personalInfo'>
-            <PersonalInfoPage/>
-          </Route>
-          <Route exact path='/login'>
-            <Login/>
-          </Route>
+          <Redirect exact path="/" to="/home" />
+          <Route path="/todo" render={() => <Todo />} exact={true} />
+          <Route path="/bulletin" render={() => <Bulletin />} exact={true} />
+          <Route path="/home" render={() => <Home />} exact={true} />
+          <Route path="/profile" render={() => <Profile />} exact={true} />
+          <Route path="/personalInfo" render={() => <PersonalInfoPage />} exact={true} />
         </IonRouterOutlet>
+
         <IonTabBar slot="bottom" color={'red-primary'}>
           <IonTabButton tab="todo" href="/todo">
             <IonIcon icon={checkbox} />
@@ -93,8 +62,8 @@ const App: React.FC = () => (
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
-    </IonReactRouter>
-  </IonApp>
-);
+    );
+  };
+  
+  export default MainTabs;
 
-export default App;

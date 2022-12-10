@@ -1,11 +1,17 @@
 import { IonContent, IonHeader, IonPage , IonToolbar } from '@ionic/react';
+import { checkmarkCircleOutline, medkitOutline, playCircleOutline, receiptOutline } from 'ionicons/icons';
 import BulletinContainer from '../components/BulletinContainer';
+import CheckInButton from '../components/CheckInButton';
+import HealthReport from '../components/HealthReport';
 import HomeDailyButton from '../components/HomeDailyButton';
+import OutputBtn from '../components/OutputBtn';
+import SelfReport from '../components/SelfReport';
 import SubjectScheduleCard from '../components/SubjectScheduleCard';
 import ToDoItems from '../components/ToDoItems';
 import './Home.css';
 
 const Tab3: React.FC = () => {
+
   return (
     <IonPage>
       <IonHeader>
@@ -17,13 +23,13 @@ const Tab3: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen className='ion-padding'>
       <h5>Schedule for today</h5>
-        <div className='schedule-container'>
+        <div className='container'>
           <SubjectScheduleCard subject_name='Mobile Computing' time_start='7:00am' time_end='10:00am'/>
           <SubjectScheduleCard subject_name='Application Development' time_start='10:00am' time_end='1:00pm'/>
           <SubjectScheduleCard subject_name='Data Analysis' time_start='1:00pm' time_end='4:00pm'/>
         </div>
         <h5>Tasks for today</h5>
-        <div className='todo-container'>
+        <div className='container'>
           <ToDoItems item_content={'Assignment #1'} />
           <ToDoItems item_content={'Project #3'} />
           <ToDoItems item_content={'Quiz in Science'} />
@@ -31,13 +37,13 @@ const Tab3: React.FC = () => {
         </div>
         <h5>Daily Tasks</h5>
         <div className='daily-container'>
-          <HomeDailyButton/>
-          <HomeDailyButton/>
-          <HomeDailyButton/>
-          <HomeDailyButton/>
+          <CheckInButton button_name='CHECK IN' button_icon={checkmarkCircleOutline}/>
+          <OutputBtn />
+          <SelfReport />
+          <HealthReport />
         </div>
         <h5>Latest Updates</h5>
-        <div className='bulletin-container'>
+        <div className='container margin-top-1'>
           <BulletinContainer author='Kairus E. Tecson'
             post_content='Picture of Batangas State University'
             img_url='https://ionicframework.com/docs/img/demos/card-media.png'

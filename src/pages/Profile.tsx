@@ -21,7 +21,7 @@ const Tab3: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent class="ion-padding">
-        <IonButton expand='block' color={'light'} href="/personalInfo" routerDirection='forward' className='profile-button'>
+        <IonButton expand='block' color={'light'} routerLink="/personalInfo" className='profile-button'>
           <div className='profile-button'>
             <IonIcon icon={personCircle}/>
             <div className='user-info'>

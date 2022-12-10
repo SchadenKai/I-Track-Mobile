@@ -6,61 +6,16 @@
     justify-content: center;
     align-items: center;
 }
-.schedule-container {
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.container > * {
     width: 100%;
-}
-
-.schedule-container > *{
     margin: 1px;
-    width: 100%;
-}
-.todo-container {
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.274);
-    border-radius: 10px;
-}
-.todo-container > * {
-    --border-style: 0;
-}
-.todo-container > * {
-    width: 100%;
 }
 .daily-container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow-x: visible;
 }
-.bulletin-container {
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.274);
-    border-radius: 10px;
-}
-.bulletin-container > * {
-    border: 0;
-    box-shadow: 0;
-    margin: 3px;
-    width: 100%;
-}
-.ion-app {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.margin-top-1 > * {
+    margin: 8px 0 !important;
 }

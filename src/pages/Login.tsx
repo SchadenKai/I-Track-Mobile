@@ -18,6 +18,7 @@ const Login: React.FC = () => {
                         <img className='container' src='./assets/icon/ITrackMobileCircle.png' alt='icon'/>
                     </section>
                     <section className='login-main'>
+                        <div className='container'><h1>Log in to continue.</h1></div>
                         <div className='login-input-wrapper'>
                         <IonItem fill='outline'>
                                 <IonLabel position='stacked'>Email</IonLabel>

@@ -4,7 +4,13 @@ import {chevronBackOutline} from 'ionicons/icons'
 import SampleComp from '../components/SampleComp';
 import './PersonalInfoPage.css';
 
-const PersonalInfoPage: React.FC = () => {
+interface ContainerProps {
+    data: string
+  }
+  
+
+const PersonalInfoPage: React.FC<ContainerProps> = ({data}) => {
+    const passedData = JSON.parse(data)
     return (
         <IonPage>
             <IonHeader>
@@ -21,92 +27,92 @@ const PersonalInfoPage: React.FC = () => {
             <IonContent fullscreen class='ion-padding'>
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='Zyrah Militante'
+                    button_name={passedData.data.name}
                     placeholder='Name'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='20-00139'
+                    button_name={passedData.data.sr_code}
                     placeholder='Student ID'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='20'
-                    placeholder='Age'
+                    button_name={passedData.data.birthdate}
+                    placeholder='Birthdate'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='Female'
+                    button_name={passedData.data.gender}
                     placeholder='Gender'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='Single'
+                    button_name={passedData.data.civil_status}
                     placeholder='Civil Status'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='Yes'
+                    button_name={passedData.data.scholar}
                     placeholder='Scholarship'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='Yes'
+                    button_name={passedData.data.working_student}
                     placeholder='Additional Work'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='Yes'
+                    button_name={passedData.data.activities}
                     placeholder='Activities'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='Other'
+                    button_name={passedData.data.transportation}
                     placeholder='Transportation'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='With Family'
-                    placeholder='Accommodation'
+                    button_name={passedData.data.accomodation}
+                    placeholder='Accomodation'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='See more'
+                    button_name={passedData.data.characteristics}
                     placeholder='Characteristics'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='Programming'
+                    button_name={passedData.data.interest}
                     placeholder='Interests'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='See more'
+                    button_name='Computer Science'
                     placeholder='Course'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='2020'
+                    button_name={passedData.data.year_started}
                     placeholder='Year Started'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='Third Year'
+                    button_name={passedData.data.year_level}
                     placeholder='Year Level'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='1.00'
+                    button_name={passedData.data.target_gwa}
                     placeholder='Target GWA'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='7'
+                    button_name={passedData.data.attended_seminars}
                     placeholder='Attended Seminars'
                 />
                 <CustomButtonAlert 
                     header_info='Please enter your info'
-                    button_name='See more'
+                    button_name={passedData.data.learning_style}
                     placeholder='Learning Styles'
                 />
             </IonContent>

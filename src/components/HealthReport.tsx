@@ -47,9 +47,10 @@ const HealthReport = ({}) => {
                 <IonContent className="ion-padding">
                     <IonList>
                         <ScaleCard question='How is your health condition?' />
-                        <SurveyBoolean question='Did you finish your task on time?'/>    
-                        <SurveyBoolean question='Feeling tired and/or having a little energy?' />
-                        <SurveyBoolean question='Trouble falling asleep?' />
+                        <SurveyBoolean question='Do you have any chrontc diseases (Asthma, Diabetes, Heart Disease)?'/>    
+                        <SurveyBoolean question='Do you have any CURRENT ILLNESS(cold, fever, cough, headache, etc) and have you received and/or are receiving treatrnent or medication?' />
+                        <SurveyBoolean question='Have you been admitted to a hospital or medical institution/clinic this week?' />
+                        <SurveyBoolean question='Do you have any injury that needs to be treated?' />
                         <IonButton color={'red-primary'} expand='block' type='submit' onClick={() => cstmOnClick()}>OK</IonButton>
                     </IonList>
                 </IonContent>

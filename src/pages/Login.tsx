@@ -42,11 +42,7 @@ const Login: React.FC = () => {
                             <IonButton expand='block' shape='round' color='red-primary' onClick={loginUser}>LOGIN</IonButton>
                         </div>
                     </section>
-                    
-            
-                    
                 </div>
-                
             </IonContent>
         </IonPage>
     )

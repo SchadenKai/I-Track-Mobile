@@ -40,7 +40,11 @@ import Login from './pages/Login';
 
 setupIonicReact();
 
-const App: React.FC = () => (
+interface ContainerProps {
+  data: string;
+}
+
+const App: React.FC<ContainerProps> = ({data}) => (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
@@ -58,16 +62,13 @@ const App: React.FC = () => (
             <Calendar />
           </Route>
           <Route exact path="/profile">
-            <Profile />
+            <Profile data={data}/>
           </Route>
           <Route exact path="/">
-            <Redirect to="/login" />
+            <Redirect to="/home" />
           </Route>
           <Route exact path='/personalInfo'>
-            <PersonalInfoPage/>
-          </Route>
-          <Route exact path='/login'>
-            <Login/>
+            <PersonalInfoPage data={data}/>
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom" color={'red-primary'}>

@@ -5,8 +5,17 @@ import './Profile.css';
 import './PersonalInfoPage.tsx'
 import AppButton from '../components/AppButton';
 
-const Tab3: React.FC = () => {
+
+interface ContainerProps {
+  data: string
+}
+
+
+const Tab3: React.FC<ContainerProps> = ({data}) => {
   const modal = useRef<HTMLIonModalElement>(null);
+  console.log(data);
+  
+  const passedData = JSON.parse(data)
 
   function dismiss() {
     modal.current?.dismiss();
@@ -25,8 +34,8 @@ const Tab3: React.FC = () => {
           <div className='profile-button'>
             <IonIcon icon={personCircle}/>
             <div className='user-info'>
-              <p>Kairus Noah E. Tecson</p>
-              <p>20-07496</p>
+              <p>{passedData.data.name}</p>
+              <p>{passedData.data.sr_code}</p>
             </div>
           </div>
         </IonButton>
@@ -35,23 +44,31 @@ const Tab3: React.FC = () => {
         <AppButton button_name='Filter Options'/>
 
         <IonCard className='graph-card-container'>
-          <IonCardContent></IonCardContent>
+          <IonCardContent>
+            <img src="./assets/images/gwaChart.png"/>
+          </IonCardContent>
         </IonCard>
         
         <AppButton button_name='Filter Options'/>
 
         <IonCard className='graph-card-container'>
-          <IonCardContent></IonCardContent>
+          <IonCardContent>
+            <img src="./assets/images/outputs.png"/>
+          </IonCardContent>
         </IonCard>
 
         <IonCard className='graph-card-container'>
-          <IonCardContent></IonCardContent>
+          <IonCardContent>
+            <img src="./assets/images/attendanceChart.png"/>
+          </IonCardContent>
         </IonCard>
 
         <AppButton button_name='Filter Options'/>
 
         <IonCard className='graph-card-container'>
-          <IonCardContent></IonCardContent>
+          <IonCardContent>
+            <img src="./assets/images/gwaChart.png"/>
+          </IonCardContent>
         </IonCard>
 
       </IonContent>

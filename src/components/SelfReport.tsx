@@ -21,7 +21,7 @@ const SelfReport = ({}) => {
         /*if (ds%2 == 0) {
             setDisable(false)
         }*/
-        //console.log(dh)
+        //console.log(dh)z
     }, 3000)
 
     function cstmOnClick() {

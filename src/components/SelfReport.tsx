@@ -2,6 +2,7 @@ import { IonButton, IonIcon, IonModal, IonHeader, IonToolbar, IonTitle, IonButto
 import { playCircleOutline } from 'ionicons/icons';
 import { useState } from 'react';
 import './HomeDailyButton.css'
+import ScaleCard from './ScaleCard';
 import SurveyBoolean from './SurveyBoolean';
 
 
@@ -47,6 +48,7 @@ const SelfReport = ({}) => {
             
                 <IonContent className="ion-padding">
                     <IonList>
+                        <ScaleCard question='How was your day?' />
                         <SurveyBoolean question='Did you finish your task on time?'/>    
                         <SurveyBoolean question='Feeling tired and/or having a little energy?' />
                         <SurveyBoolean question='Trouble falling asleep?' />

@@ -29,3 +29,11 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+.scale-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.scale-card-content {
+    width:  100%;
+}

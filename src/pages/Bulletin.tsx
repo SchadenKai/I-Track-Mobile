@@ -16,7 +16,6 @@ const Tab2: React.FC = () => {
 
       <IonContent fullscreen class='ion-padding'>
         <h3>Latest Updates</h3>
-        <AppButton button_name='Filter Options' />
         <div className='bulletin-page-container'>
           <BulletinContainer author='Kairus Noah E. Tecson'
             post_content='Picture of Batangas State University'

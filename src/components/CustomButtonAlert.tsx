@@ -1,13 +1,15 @@
 import { useIonAlert, IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton } from '@ionic/react';
-import { useRef } from 'react';
+import { text } from 'ionicons/icons';
+import { useRef, useState } from 'react';
 import './CustomButtonAlert.css'
 
 
 interface ContainerProps {
     header_info: string,
-    button_name: string,
-    placeholder: string
+    placeholder: string,
+    button_name : string
 }
+
 
 const CustomButtonAlert: React.FC<ContainerProps> = ({header_info, button_name, placeholder}) => {
     const modal = useRef<HTMLIonModalElement>(null);
@@ -15,7 +17,7 @@ const CustomButtonAlert: React.FC<ContainerProps> = ({header_info, button_name, 
     function dismiss() {
       modal.current?.dismiss();
     }
-    
+    const [buttonNameState, setState] = useState(button_name)
 
     return (
         <div className='custom-button-alert'>
@@ -26,7 +28,13 @@ const CustomButtonAlert: React.FC<ContainerProps> = ({header_info, button_name, 
             onClick={()=>
                 presentAlert({
                     header: header_info,
-                    buttons: ['OK'],
+                    buttons: [{
+                        text: 'OK',
+                        handler: (inputData) => {
+                            button_name = inputData[0]
+                            setState(button_name)
+                        }
+                    }],
                     inputs: [
                       {
                         placeholder: placeholder,
@@ -37,7 +45,7 @@ const CustomButtonAlert: React.FC<ContainerProps> = ({header_info, button_name, 
             >
             <div className='button-label-container'>
                 <p>{placeholder}</p>
-                <p>{button_name}</p>
+                <p>{buttonNameState}</p>
             </div>
             </IonButton>
         </div>

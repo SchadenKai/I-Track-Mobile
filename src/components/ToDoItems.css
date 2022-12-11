@@ -2,7 +2,3 @@
     color: grey;
     text-decoration: line-through;
 }
-ion-checkbox::part(container) {
-    border-radius: 6px;
-    border: 2px solid grey;
-}

@@ -1,0 +1,16 @@
+.answer-btns-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+.answer-btns-row > ion-button > * {
+    padding: 0;
+    margin: 0 10px;
+}
+.answer-btns-row > ion-button {
+    margin-left: -50px;
+}
+.survey-card {
+    display: flex;
+    flex-direction: column;
+}

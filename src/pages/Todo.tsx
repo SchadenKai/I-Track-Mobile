@@ -1,4 +1,5 @@
 import { IonContent, IonHeader, IonPage , IonToolbar } from '@ionic/react';
+import FabButton from '../components/FabButton';
 import ToDoItems from '../components/ToDoItems';
 import './Todo.css';
 
@@ -34,6 +35,9 @@ const Tab1: React.FC = () => {
           <ToDoItems item_content='Quiz in Science'/>
           <ToDoItems item_content='Assignment #2'/>
         </div>
+
+
+        <FabButton />
       </IonContent>
     </IonPage>
   );

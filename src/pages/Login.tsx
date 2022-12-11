@@ -18,9 +18,10 @@ const Login: React.FC = () => {
                         <img className='container' src='./assets/icon/ITrackMobileCircle.png' alt='icon'/>
                     </section>
                     <section className='login-main'>
+                        <div className='container'><h1>Log in to continue.</h1></div>
                         <div className='login-input-wrapper'>
                         <IonItem fill='outline'>
-                                <IonLabel position='floating'>Email</IonLabel>
+                                <IonLabel position='stacked'>Email</IonLabel>
                                 <IonInput 
                                     clearOnEdit
                                     placeholder='Email'
@@ -29,7 +30,7 @@ const Login: React.FC = () => {
                                 />
                             </IonItem>
                             <IonItem fill='outline'>
-                                <IonLabel position='floating'>Password</IonLabel>
+                                <IonLabel position='stacked'>Password</IonLabel>
                                 <IonInput 
                                     placeholder='Password'
                                     onIonChange={(e:any) => setPassword(e.target.value)}

@@ -1,4 +1,5 @@
 import { IonContent, IonHeader, IonPage, IonToolbar } from '@ionic/react';
+import AppButton from '../components/AppButton';
 import BulletinContainer from '../components/BulletinContainer';
 import './Bulletin.css';
 
@@ -14,17 +15,21 @@ const Tab2: React.FC = () => {
       </IonHeader>
 
       <IonContent fullscreen class='ion-padding'>
-      
-        <BulletinContainer author='Kairus Noah E. Tecson'
-          post_content='Picture of Batangas State University'
-          img_url='https://ionicframework.com/docs/img/demos/card-media.png'
-          profile_img_url='https://ionicframework.com/docs/img/demos/avatar.svg' />
-        <BulletinContainer author='Darren Malibiran' 
-          post_content='The quick brown fox jumps over the lazy dog' 
-          profile_img_url='https://ionicframework.com/docs/img/demos/avatar.svg'/>
-        <BulletinContainer author='Zyrah Militante' 
-          post_content='Presentation in Data Analaysis' 
-          profile_img_url='https://ionicframework.com/docs/img/demos/avatar.svg'/>
+        <h3>Latest Updates</h3>
+        <div className='bulletin-page-container'>
+          <BulletinContainer author='Kairus Noah E. Tecson'
+            post_content='Picture of Batangas State University'
+            img_url='https://ionicframework.com/docs/img/demos/card-media.png'
+            profile_img_url='https://ionicframework.com/docs/img/demos/avatar.svg' />
+          <BulletinContainer author='Darren Malibiran' 
+            post_content='The quick brown fox jumps over the lazy dog' 
+            profile_img_url='https://ionicframework.com/docs/img/demos/avatar.svg'/>
+          <BulletinContainer author='Zyrah Militante' 
+            post_content='Presentation in Data Analaysis' 
+            profile_img_url='https://ionicframework.com/docs/img/demos/avatar.svg'/>
+        </div>
+        
+        
 
       </IonContent>
     </IonPage>

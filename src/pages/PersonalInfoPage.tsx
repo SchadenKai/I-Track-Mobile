@@ -19,7 +19,6 @@ const PersonalInfoPage: React.FC = () => {
             </IonHeader>
 
             <IonContent fullscreen class='ion-padding'>
-            
                 <CustomButtonAlert 
                     header_info='Please enter your info'
                     button_name='Zyrah Militante'
